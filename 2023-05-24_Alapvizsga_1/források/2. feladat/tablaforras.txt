@@ -1,0 +1,60 @@
+<table>
+      <tr>
+        <th>Készlet</th>
+        <th>Építőelemek száma</th>
+      </tr>
+      <tr>
+        <td>Járművek</td>
+      </tr>
+      <tr>
+        <td>Ford Mustang</td>
+        <td>1471 db</td>
+      </tr>
+      <tr>
+        <td>SzellemirtókTM ECTO-1</td>
+        <td>2352 db</td>
+      </tr> 
+      <tr>
+        <td>Harley Davidson Fat Boy</td>
+        <td>1023 db</td>
+      </tr>
+      <tr>
+        <td>James Bond Aston Martin DB5</td>
+        <td>1295 db</td>
+      </tr>
+      <tr>
+        <td>Londoni autóbusz</td>
+        <td>1686 db</td>
+      </tr>
+      <tr>
+        <td>Fiat 500</td>
+        <td>960 db</td>
+      </tr>
+      <tr>
+        <td>Volkswagen T1 lakóautó</td>
+        <td>1334 db</td>
+      </tr>
+      <tr>
+        <td>Volkswagen Bogár</td>
+        <td>1167 db</td>
+      </tr>
+      <tr>
+        <td>Épületek</td>
+      </tr>
+      <tr>
+        <td>Colosseum</td>
+        <td>9036 db</td>
+      </tr>
+      <tr>
+        <td>rendőrkapitányság</td>
+        <td>2923 db</td>
+      </tr>
+      <tr>
+        <td>Sarok garázs</td>
+        <td>2569 db</td>
+      </tr>
+      <tr>
+        <td>Könyvesbolt</td>
+        <td>2504 db</td>
+      </tr>
+      </table>

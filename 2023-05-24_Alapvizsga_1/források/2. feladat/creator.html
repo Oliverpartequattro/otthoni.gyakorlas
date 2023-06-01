@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="jquery.min.js"></script>
+  <script src="popper.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <title>LEGO Creator Expert</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+<!--Képlapozó sáv-->
+<div class="container-fluid" id="kepek">
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>      
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="kepek/01.png" alt="Fiat 500" title="Fiat 500">
+      </div>
+      <div class="carousel-item">
+        <img src="kepek/02.png" alt="NASA Apollo 11 Holdkomp" title="NASA Apollo 11 Holdkomp">
+      </div>
+      <div class="carousel-item">
+        <img src="kepek/03.png" alt="Ford Mustang" title="Ford Mustang">
+      </div>
+    </div>      
+    
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+  <h1 class="d-none d-md-block">LEGO Creator Expert</h1>
+</div>
+
+<!--Menü-->
+<nav class="navbar navbar-expand-sm bg-primary navbar-light justify-content-center">
+  <ul class="navbar-nav font-weight-bold">
+    <li class="nav-item">
+        <a class="nav-link text-light" href="#ismerteto">Ismertető</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#termekek">Creator Expert termékek</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link text-light" href="#jarmuvek">Járművek</a>
+  </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-light" href="#epuletek">Épületek</a>
+    </li>
+    
+  </ul>
+</nav>
+<!--Ismertető-->
+<h2 id="ismerteto">Creator Expert - Ismertető</h2> 
+<div class="row">
+   <div class="col-lg-8 ">
+    
+      <h3>A tégla a részletekben rejtőzik</h3>
+  
+      <p>Készen állsz az igazi LEGO® építési feladatra? A korszerű LEGO Creator Expert modellek telis-tele vannak bonyolult funkciókkal és apró részletekkel – amelyek minden egyes készletben több órás építési élvezeteket garantálnak.</p>
+      <p>Egy újfajta csomagolást vezettünk be, hogy a felnőtt építők könnyebben megtalálhassák az érdeklődési körüknek és a szenvedélyüknek megfelelő termékeket. Legyen szó a sportról, a filmekről, a művészetről, a járművekről, a híres épületekről vagy a vásári jellegzetességekről, a LEGO-készletek építőkockái segítségével mind életre kelthető. Mivel az új csomagoláson egyértelműen fel van tüntetve, hogy az adott termék milyen érdeklődési körhöz köthető, úgy döntöttünk,<span style="font-weight: bold
+      ;">megszüntetjük</span> a Creator Expert márkanevet. Bár a márkanév a jövőben nem fog szerepelni a csomagoláson vagy a kommunikációs anyagainkban, termékcsaládunk ugyanúgy tartalmazza majd a haladó szintű, gyűjthető készleteket, amelyek garantáltan hosszú órákon át biztosítják az építés örömét.</p>
+
+      <img src="kepek/expertlogo.png" id="logo" alt="Creator Expert Logo" title="Creator Expert Logo">
+  </div>
+
+  <div class="col-lg-4 ">
+    <h3 id="termekek">Creator Expert termékek</h3>
+
+    <table>
+      <tr>
+        <th>Készlet</th>
+        <th>Építőelemek száma</th>
+      </tr>
+      <tr>
+        <td colspan="2" class="fejsor" style="text-align: center;">Járművek</td>
+      </tr>
+      <tr>
+        <td>Ford Mustang</td>
+        <td>1471 db</td>
+      </tr>
+      <tr>
+        <td>SzellemirtókTM ECTO-1</td>
+        <td>2352 db</td>
+      </tr> 
+      <tr>
+        <td>Harley Davidson Fat Boy</td>
+        <td>1023 db</td>
+      </tr>
+      <tr>
+        <td>James Bond Aston Martin DB5</td>
+        <td>1295 db</td>
+      </tr>
+      <tr>
+        <td>Londoni autóbusz</td>
+        <td>1686 db</td>
+      </tr>
+      <tr>
+        <td>Fiat 500</td>
+        <td>960 db</td>
+      </tr>
+      <tr>
+        <td>Volkswagen T1 lakóautó</td>
+        <td>1334 db</td>
+      </tr>
+      <tr>
+        <td>Volkswagen Bogár</td>
+        <td>1167 db</td>
+      </tr>
+      <tr>
+        <td colspan="2" class="fejsor" style="text-align: center;">Épületek</td>
+      </tr>
+      <tr>
+        <td>Colosseum</td>
+        <td>9036 db</td>
+      </tr>
+      <tr>
+        <td>rendőrkapitányság</td>
+        <td>2923 db</td>
+      </tr>
+      <tr>
+        <td>Sarok garázs</td>
+        <td>2569 db</td>
+      </tr>
+      <tr>
+        <td>Könyvesbolt</td>
+        <td>2504 db</td>
+      </tr>
+      <tr>
+        <td>Assembly Square piactér</td>
+        <td>4002 db</td>
+      </tr>
+      </table>
+   
+  </div>
+</div>
+
+<!--Járművek-->
+<h2 id="jarmuvek">Járművek</h2>
+<p>A járművek olyan dolgok az életben, amiket a felnőttek és a gyermekek ugyanannyira szeretnek. Azonban amikor a felnőttek nézik a járműveket, gyakran arra koncentrálnak, hogy mennyire praktikusak. Figyelembe veszik a tárolóhelyet, a benzinfogyasztást és a kényelmet. A mi képzeletünk olyan módon van bekorlátozva, ahogy a gyermekeké nincsen. A LEGO® járműkészletek csakis arról szólnak, hogy a járművek mennyire csodálatosak. És ki tudja, talán te is újra felfedezed a varázsukat, amikor ilyen készleteket ajándékozol valakinek!</p>
+
+<div class="row">
+  <div class="py-3 col-lg-4">
+    <div class="media p-3 h-100">
+      <div class="media-body">
+        <h4>Fiat 500 <small><i>(10271)</i></small></h4>
+        <img src="kepek/fiat500.jpg" alt="Fiat 500" title="Fiat 500" class="mt-2 termekkep">
+        <p>Ez a LEGO® Creator Expert Fiat 500 autómodell (10271) feleleveníti a klasszikus autótervezés valódi ikonját. A tinédzser és felnőtt rajongók örömmel fogják belevetni magukat a kihívást jelentő építési élménybe, melyet ez a 60-as évek Fiat 500F legendája alapján készült modellkészlet nyújt. A rajongókra olyan valódi LEGO kockákból kialakított részletek várnak, mint a bőrönddel ellátott csomagtartó, a részletesen kialakított belső tér, valamint a nyitható tető, ajtók, motorháztető és hátsó ajtó. Hogy teljes legyen az olasz hangulat, ez a klasszikus autómodell egy összecsukható festőállványt is tartalmaz ecsettel, palettával és a híres római Colosseum előtt álló autóról készült kis „festménnyel“.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="py-3 col-lg-4">
+    <div class="media  p-3 h-100">
+      <div class="media-body">
+        <h4>Ford Mustang<small><i>(10265)</i></small></h4>
+        <img src="kepek/mustang.jpg" alt="Ford Mustang" title="Ford Mustang" class="mt-2 termekkep">
+        <p>Fedezd fel a jellegzetes, 1960-as évekbeli amerikai sportkocsi varázsát a LEGO® Creator Ford Mustang szettel, melyet fehér versenycsíkokkal díszített, sötétkék karosszéria, motorháztető, nyomtatott musztáng rács jelvény, GT emblémák és tapadó abroncsokkal ellátott, 5-küllős keréktárcsák jellemeznek. A Forddal együttműködve kifejlesztett hiteles másolathoz választható kiegészítők is tartoznak, melyekkel testre szabhatod a modellt. Ilyen például a többfajta rendszámtábla, a kompresszor, a hátsó légterelő szárny, az erőteljes kipufogócsövek, az első légterelő és a dinitrogén-oxid tartály. Akár még a hátsó tengely emelkedési szintjét is állíthatod, a minél ütősebb kinézet érdekében! Vedd le a tetőpanelt vagy nyisd ki az ajtókat, hogy hozzáférj a részletesen kidolgozott belsőtérhez, ahol impozáns üléseket, rádiót, működő kormánykereket és középkonzolon elhelyezett sebességváltót is találsz. Tárolj különböző elemeket a csomagtartóban, vagy nyisd fel a motorháztetőt, hogy felfedezd a részletesen kidolgozott, 390-es nagy blokkos V8-as motort akkumulátorral, tömlőkkel és légszűrővel kiegészítve. Ezt a haladó szintű készletet úgy alakítottuk ki, hogy kihívásokkal és nosztalgiával teli, izgalmas építési élményt nyújtson, emellett otthonodban vagy az irodában is nagyszerű központi darab lehet.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="py-3 col-lg-4">
+    <div class="media p-3 h-100">
+      <div class="media-body">
+        <h4>Harley-Davidson® Fat Boy®<small><i>(10269)</i></small></h4>
+        <img src="kepek/harley.jpg" alt="Harley-Davidson" title="Harley-Davidson" class="mt-2 termekkep">
+        <p>Fedezd fel az ikonikus mérnöki munka apró részleteit a LEGO® Creator Expert 10269 Harley-Davidson® Fat Boy® motorkerékpárral! A Harley-Davidsonnal együttműködve kifejlesztett és részletesen kidolgozott LEGO motorkerékpár megragadja a valódi gép varázsát. Emellett a tömör féktárcsás Lakester kerekekkel, tömzsi gumiabroncsokkal és könnycseppalakú üzemanyagtartállyal ellátott modellt nyomtatott logók és egy beépített sebességmérő egészíti ki. Továbbá találsz egy Milwaukee-Eight® motort mozgó dugattyúkkal, kettős kipufogócsövet, kormányt, mozgatható sebességváltó pedált és fékkarokat, egy kitámasztót és egy strapabíró bemutatóállványt is. A sötét vörös és fekete színösszeállítással kialakított, csodálatos kiállítható modell igazán jellegzetes központi dekorációként szolgálhat otthon vagy az irodában. Ez a tapasztalt építőknek szánt LEGO készlet magával ragadó és izgalmas építési élményt nyújt.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+<!--Épületek-->
+<h2 id="epuletek">Épületek</h2>
+<p>Építsd meg a saját városodat. A moduláris épületektől kezdve a LEGO® Creator-házakig itt mindent megtalálsz, ami otthonok, épületek és járművek megépítéséhez kell. Ha már mindet megépítetted, szétszedheted őket, majd a LEGO-építőkockákból egy merőben új várost emelhetsz.</p>
+  
+  
+<div class="row">
+  <div class="py-3 col-lg-6">
+    <div class="media p-3 h-100">
+      <div class="media-body">
+        <h4>Rendőrkapitányság<small><i>(10278)</i></small></h4>
+        <p>A LEGO Rendőrkapitányság a fantáziadús Moduláris épületek gyűjteményének része. Akár egyedül, akár a családod körében vágsz bele az építésbe, mindenképpen próbára teheted a koncentrációs képességedet, és egy szemet gyönyörködtető tárgyat készíthetsz, amellyel kiegészítheted a többi LEGO Moduláris épületedet.</p>
+        <img src="kepek/rendornagy.jpg" alt="Rendőrkapitányság" title="Rendőrkapitányság" class="mt-2 termekkep">
+      </div>
+    </div>
+  </div>
+
+  <div class="py-3 col-lg-6">
+    <div class="media p-3 h-100">
+       <div class="media-body">
+        <h4>Sarok garázs<small><i>(10265)</i></small></h4>
+        <p>Ugorj be a LEGO® Creator Expert 10264 Sarok garázsba, ahol a szórakozás és meglepetések világa vár rád! Ez a lenyűgöző modell levehető épületrészekkel van ellátva, hogy könnyen hozzáférj a gondosan kidolgozott belső térhez és az épület 3 szintjéhez. A földszinten találsz egy 1950-es évekbeli benzinkutat üzemanyag-szivattyúval, egy kioszkot és egy járműjavító műhelyet is, melyet egy felhúzható ajtó, egy járműemelő és egy kerékcserélő eszköz egészít ki. A középső szinten lévő állatklinikában vár rád egy vizsgálóasztal, akvárium és egy váróterem kanapéval, míg a felső szinten egy jól felszerelt lakást találsz konyhával, TV-vel, kanapéval, ággyal és a tetőteraszra vezető lépcsővel, mely napozóággyal, napernyővel és virágoskerttel van ellátva. Az épület külseje egy klasszikus, 1950-es évekbeli homlokzattal van kialakítva, melyet egy reklámtábla, részletesen kidolgozott ablakok és egy dekoratív tetővonal díszít. Emellett tartozik még hozzá egy járda fával és díszes utcai lámpával kiegészítve.</p>
+        <img src="kepek/garazs.jpg" alt="Sarok garázs" title="Sarok garázs" class="mt-2 termekkep">    
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--Lábléc-->
+<div class="footer p-2">
+  <a href="https://lego.com/hu-hu/themes/creator-expert/about" target="_blank">LEGO Creator Expert</a>
+</div>
+
+
+  
+</body>
+</html>
