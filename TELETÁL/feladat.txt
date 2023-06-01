@@ -1,0 +1,7 @@
+1. olvassuk be tároljuk el 
+2. hány étel van a kínálatban
+3. számoljuk meg hány főétel van a listában
+4. a keressük meg a legolcsobb ételt
+4. b keressük meg a legolcsobb menüt
+5. összes árbevétel euróban (mennyiség*ár*402,5) a főételekből
+6. statisztika fajta-rendelt mennyiség
