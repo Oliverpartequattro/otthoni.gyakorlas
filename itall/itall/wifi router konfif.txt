@@ -1,0 +1,26 @@
+1.	PC-vel kábelesen rácsatlakozni egy Ethernet (kapcsolóport) portra!
+a.	parancssorban: 
+i.	ipconfig (mi az IP-m)
+ii.	ipconfig /release (DHCP IP eldobása)
+iii.	ipconfig /renew (Új DHCP IP kérése a routertől)
+2.	Böngészővel címsorban az alapértelmezett átjárónk IP címére csatlakozunk!
+a.	felhasználónév: admin
+b.	jelszó: admin vagy nincs jelszó
+3.	Menü
+a.	adminisztráció
+b.	menedzsment
+c.	eszközök
+d.	beállítások
+i.	ezeken belül jelszó változtatás
+4.	Network vagy LAN
+a.	itt kell megadni a belső hálózatunk IP tartományát
+b.	és a DHCP által kiosztott címeket.
+5.	WiFi
+a.	Hálózat neve (SSID) – ez az eszközön megjelenő név KisNagybetű érzékeny
+b.	SSID Broadcast kikapcsolása – nem lesz látható a hálózat neve az eszközökön!
+c.	Jelszóvédelem:
+i.	Titkosítás módja: WPA2 personal
+ii.	Titkosítási kulcs: AES
+iii.	Jelszó vagy Jelmondat: ide jön egy biztonságos jelszó
+6.	Internet vagy WAN
+a.	Az IP címet automatikusan/dinamikusan kapja a szolgáltatótól (ez az internet vagy WAN interfész a routeren, ide csatlakozik a szolgáltató modem kábele).

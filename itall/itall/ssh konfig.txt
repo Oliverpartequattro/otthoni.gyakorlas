@@ -1,0 +1,16 @@
+SSH távoli elérés:
+ - Állomásnév, ami nem az alapértelmezett (hostname [nev])
+
+- Tartománynév (ip domain-name [nev])
+
+- Titkosítási kulcs generálása (crypto key generate rsa) kulcsméret pl 1024
+
+- SSH 2-es verzió beaállítása (ip ssh version 2)
+
+- Helyi felhasználó létrehozása (username [nev] secret [jelszo])
+
+- Vonali bemenet beállítása (line vty 0 15):
+	   - átviteli protokoll (transport input ssh)
+	   - helyi bejelentkeztetés aktiválása (login local)
+
+Ezen felül szükséges az eszközön ip cím beállítás, ill. átjáró, ha nem router az eszköz.

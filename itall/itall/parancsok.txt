@@ -1,0 +1,124 @@
+CISCO gyakorlati segédlet
+CCNA I témakörökhöz
+SWITCH
+Állomásnév:
+Switch(config)# hostname S1
+Minden vonali bemenet jelszava (Konzol és telnet/ssh):
+Switch (config)#line con 0
+Switch (config-line)#password cisco
+Switch (config-line)#login
+
+Switch (config)#line vty 0 15
+S1(config-line)# transport input telnet	//alapértelmezett ez a beállítás; csak akkor kell, ha át van állítva
+Switch (config-line)#password cisco
+Switch (config-line)#login
+Switch (config-line)#exec-timeout x   //x perc után kijelentkeztet a távoli elérés csatlakozásból
+Privilégizált mód jelszava:
+S1(config)# enable password class	//nem titkosított jelszó
+S1(config)# enable secret class	//titkosított jelszó
+
+S1(config)# service password-encryption	//minden nyílt szövegű jelszó titkosítása a konfigurációban
+
+S1(config)# login block-for x attempts y within z //a felhasználói módba való bejelntkezést tiltja le x másodpercre, ha y db rossz jelszó lett megadva z másodpercen belül
+S1(config)# security passwords min-length x //az újonnan beállított jelszavaknak legalább x karakter hosszúnak kell lenniük
+Management interface (távoli eléréshez):
+S1(config)# interface vlan 1
+S1(config-if)# ip address ip_cím alhálózati_maszk
+például: S1(config-if)# ip address 192.168.0.2 255.255.255.0
+S1(config-if)# no shutdown
+Alapértelmezett átjáró (távoli eléréshez):
+S1(config)# ip default-gateway átjáró_ip_címe
+például: S1(config)# ip default-gateway 192.168.0.1
+A nap (figyelmeztető) üzenete:
+S1(config)# banner motd @Figyelmeztető szöveg@	//@ határoló karakter (lehet bármilyen karakter)
+Interfész címke:
+S1(config)# interface vlan 1	
+S1(config-if)# description szöveges_cimke		//szöveg pl.: admin_telnet
+Konfiguráció mentése:
+S1# copy running-config startup-config 
+Konfiguráció ellenőrzése:
+S1# show running-config	//futó konfiguráció lekérdezése
+S1# show startup-config 	//induló konfiguráció lekérdezése
+S1# show ip interface brief	//tömör lista az interfészek címeiről és állapotáról
+S1# ping cél_ip_cím	//cél ip elérhető-e a hálózaton
+például: S1# ping 192.168.0.55
+SSH elérés:
+switch(config)# enable secret class     //távoli eléréshez szükséges privilégizált jelszó
+switch(config)# hostname S1    //az alapértelmezettől eltérő állomásnév legyen
+S1(config)# ip domain-name domainnév   //domain név pl: sajat.com
+S1(config)# username Felhnév privilege level password/secret Jelszó
+például: S1(config)# username Admin privilege 15 password Engedjbe
+S1(config)# crypto key generate rsa
+S1(config)# kulcshossz	//általában 1024
+switch(config)# ip ssh version 2
+S1(config)# line vty 0 15
+S1(config-line)# transport input ssh
+S1(config-line)# login local
+S1(config-line)# exit
+Jelszó (induló konfiguráció) kihagyása:
+Boot folyamat közben az eszközön „Mode” gomb nyomva tartása, amíg folyamatosan világítani fog
+switch: flash_init (flash kártya fájlrendszerének inicializálása, mert azon van a config-text fájl)
+switch: load_helper 
+switch: rename flash:config.text flash:config.old (config.text fájl átnevezése, így nem töltődik be a startup-config)
+switch: boot
+utána belépve:
+Switch# copy config.old config.text (átnevezett konfigurációt visszanevezzük az eredetire)
+Switch# copy startup-config running-config (startup-konfigurációt a futóba visszatöltjük)
+Sw1(config)# line console 0 (jelszó megváltoztatása)
+… stb
+Sw1# copy running-config startup-config (új jelszóval konfiguráció mentése)
+
+ 
+ROUTER
+Az alap konfiguráció ugyanaz, mint Switch esetében, a vlan 1-re és az alapértelmezett átjáróra vonatkozó részek kivételével!
+
+R1(config)# security passwords min-length x  //legalább x hosszúnak kell lennie minden ezután megadott jelszónak
+Interfész címke:
+R1(config)# interface int_azonosító	//int_azonosító pl: FastEthernet 0/1, röviden f0/1
+R1(config-if)# description szöveges_cimke	//pl. LAN_to_admin
+Interfész Ipv4 címzése:
+R1(config)# interface int_azonosító	//int_azonosító pl: FastEthernet 0/1, röviden f0/1
+R1(config-if)# ip address ip_cím alhálózati_maszk
+például: R1(config-if)# ip address 192.168.10.254 255.255.255.0
+R1(config-if)# no shutdown
+Interfész Ipv6 címzése:
+R1(config)# ipv6 unicast-routing  //ipv6 forgalomirányítás bekapcsolása a routeren
+R1(config)# interface int_azonosító	//int_azonosító pl: FastEthernet 0/1, röviden f0/1
+R1(config-if)# ipv6 address ipv6_cím/prefix hossz
+például: R1(config-if)# ipv6 address 2001:DB8:ACAD:AB::1/64
+R1(config-if)# ipv6 address ipv6_link-local cím link-local
+például: R1(config-if)# ipv6 address FE80::1 link-local
+R1(config-if)# no shutdown
+Statikus útvonalak:
+R1(config)# ip route cél_hálózati_cím maszk kimenő_interfész/következő_ugrás_cím //a kimenő interfész és a következő ugrás cím közül csak az egyik adható meg egyszerre
+Statikus útvonal megadása kimenő interfésszel (másnéven: közvetlenül csatlakozó statikus útvonal):
+például: R1(config)# ip route 172.16.0.0 255.255.255.0 S0/0/0
+(ahol S0/0/0 R1-nek azon interfésze, amelyen továbbítania kell a csomagot a célhálózat irányába.)
+Statikus útvonal megadása következő ugrás címmel (másnéven: rekurzív statikus útvonal):
+például: R1(config)# ip route 172.16.0.0 255.255.255.0 200.0.0.1
+(ahol a 200.0.0.1 az R1-el szomszédos Router IP címe, amellyel R1-nek közös csatlakozása van.)
+Alapértelmezett statikus útvonal megadása:
+például: R1(config)# ip route 0.0.0.0 0.0.0.0 S0/0/0
+vagy
+például: R1(config)# ip route 0.0.0.0 0.0.0.0 200.0.0.1
+Jelszó (induló konfiguráció) kihagyása:
+Boot folyamat közben konzolról Ctrl+Pause/Break
+rommon_1>: confreg 0x2142 (a konfigurációs regiszter értéke=a startup-config figyelmen kívül hagyása)
+!Ha a parancs kiadása után üzenetet kapunk, hogy a változtatások érvénybe lépéséhez „reset” szükséges, akkor reset paranccsal indítjuk újra, különben a boot-al!
+rommon_2> reset VAGY rommon_2 > boot
+utána belépve:
+Router# copy startup-config running-config (korábbi konfigurációt a futóba visszatöltjük)
+R1 (config)# config-register 0x2102
+R1(config)# line console 0 (jelszó megváltoztatása)
+…
+R1# copy running-config startup-config (új jelszóval konfiguráció mentése)
+
+EGYÉB
+Router(config)#no ip domain-lookup    /kikapcsolja a DNS keresést rossz parancs bevitele esetén
+
+Router(config)#line console 0    
+Router(config-line)# logging synchronous   /a rendszerüzenetek nem szakítják meg a beírt parancsok 
+	szövegét
+
+
+
